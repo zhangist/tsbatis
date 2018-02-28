@@ -11,7 +11,6 @@ export class PgConnectionTestHelper {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
-            config.password = "travis";
             const pool = new PgConnectionPool(config, true);
             const conn = await pool.getConnection();
             const newStudent = new Student();
@@ -43,7 +42,6 @@ export class PgConnectionTestHelper {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
-            config.password = "travis";
             const pool = new PgConnectionPool(config, true);
             const conn = await pool.getConnection();
             const newStudent = new Student();

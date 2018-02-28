@@ -51,7 +51,6 @@ describe(".connectionFactory", () => {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
-            config.password = "travis";
             const connFactory = new ConnectionFactory(config, true);
             connFactory.getConnection()
                 .then((conn) => {

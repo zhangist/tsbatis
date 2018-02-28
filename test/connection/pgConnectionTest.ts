@@ -29,7 +29,6 @@ describe(".pgConnection", () => {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
-            config.password = "travis";
             const pool = new PgConnectionPool(config, true);
             pool.getConnection()
                 .then((conn) => {
@@ -54,7 +53,6 @@ describe(".pgConnection", () => {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
-            config.password = "travis";
             const pool = new PgConnectionPool(config, true);
             pool.getConnection()
                 .then((conn) => {
@@ -79,7 +77,6 @@ describe(".pgConnection", () => {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
-            config.password = "travis";
             const pool = new PgConnectionPool(config, true);
             pool.getConnection()
                 .then((conn) => {
@@ -104,7 +101,6 @@ describe(".pgConnection", () => {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
-            config.password = "travis";
             const pool = new PgConnectionPool(config, true);
             pool.getConnection()
                 .then((conn) => {
