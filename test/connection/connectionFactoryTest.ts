@@ -1,6 +1,11 @@
 import { expect } from "chai";
 import * as path from "path";
-import { ConnectionFactory, MysqlConnectionConfig, SqliteConnectionConfig } from "../../src/index";
+import {
+    ConnectionFactory,
+    MysqlConnectionConfig,
+    PgConnectionConfig,
+    SqliteConnectionConfig
+} from "../../src/index";
 
 describe(".connectionFactory", () => {
     describe("#getConnection", () => {
@@ -27,6 +32,26 @@ describe(".connectionFactory", () => {
             config.database = "northwind";
             config.host = "localhost";
             config.user = "travis";
+            const connFactory = new ConnectionFactory(config, true);
+            connFactory.getConnection()
+                .then((conn) => {
+                    if (conn) {
+                        done();
+                    } else {
+                        done("cannot get conenction");
+                    }
+                })
+                .catch((err) => {
+                    done(err);
+                });
+        });
+
+        it("get pg connection", (done) => {
+            const config = new PgConnectionConfig();
+            config.database = "northwind";
+            config.host = "localhost";
+            config.user = "travis";
+            config.password = "travis";
             const connFactory = new ConnectionFactory(config, true);
             connFactory.getConnection()
                 .then((conn) => {

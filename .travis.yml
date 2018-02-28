@@ -10,6 +10,8 @@ node_js:
 before_script:
   - mysql -e 'create database northwind;'
   - mysql -u root --default-character-set=utf8 northwind < sql/mysql/northwind.sql
+  - psql -U postgres -c 'create database northwind;'
+  - psql -U username -W -d northwind -f sql/pg/northwind.sql
 
 after_success:
   - npm run coveralls

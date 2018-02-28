@@ -15,6 +15,7 @@ import { FilterOperator } from "./filterOperator";
 import { IConnectionConfig } from "./iConnectionConfig";
 import { KeyValue } from "./keyValue";
 import { MysqlConnectionConfig } from "./mysqlConnectionConfig";
+import { PgConnectionConfig } from "./pgConnectionConfig";
 import { Page } from "./page";
 import { PageRowBounds } from "./pageRowBounds";
 import { RelationBase } from "./relationBase";
@@ -54,4 +55,5 @@ export {
     IConnectionConfig,
     SqliteConnectionConfig,
     MysqlConnectionConfig,
+    PgConnectionConfig,
 };

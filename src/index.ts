@@ -15,6 +15,7 @@ import {
   FilterOperator,
   KeyValue,
   MysqlConnectionConfig,
+  PgConnectionConfig,
   Page,
   PageRowBounds,
   RelationBase,
@@ -61,6 +62,7 @@ export {
   TableEntity,
   SqliteConnectionConfig,
   MysqlConnectionConfig,
+  PgConnectionConfig,
 
   IConnection,
   ConnectionFactory,
