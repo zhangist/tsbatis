@@ -13,6 +13,7 @@
 -- tool to execute the following commands
 -- ------------------------------------------------------
 
+
 -- Dumping structure for table northwind.customer
 CREATE TABLE customer
 (
